@@ -1,0 +1,31 @@
+package com.example.weather.data;
+
+/**
+ * Created with IntelliJ IDEA.
+ * Author: weiyiming
+ * Date: 13-4-24
+ * Time: 下午8:40
+ */
+public class CityCodeTransformer {
+    private String cityName;
+    private CityCodeTransformer cityCodeTransformer = new CityCodeTransformer();
+
+    public String getCityName() {
+        return cityName;
+    }
+
+    public void setCityName(String cityName) {
+        this.cityName = cityName;
+    }
+
+    private CityCodeTransformer(){}
+
+    public CityCodeTransformer getInstance(){
+        return cityCodeTransformer;
+    }
+
+    public String fromNameToCode(){
+
+        return null;
+    }
+}

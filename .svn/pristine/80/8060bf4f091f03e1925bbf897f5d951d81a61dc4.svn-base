@@ -1,0 +1,30 @@
+package com.example.weather.db;
+
+import android.content.Context;
+
+/**
+ * Created with IntelliJ IDEA.
+ * Author: weiyiming
+ * Date: 13-4-27
+ * Time: 下午6:58
+ */
+public class DBController {
+    /*引入sqlite数据库helper*/
+    private MySQLiteOpenHelper dbHelper;
+    /*数据库版本号*/
+    private static final int VERSION = 1;
+    /*数据库名*/
+    private static final String DBNAME = "qiqiweather.db";
+    /*整点实况天气表，包括时间点，温度，风向，风力，降水，湿度*/
+    private static final String SK2WEATHER_TABLE = "sk2";
+    /*某个城市当天至未来5天的详细天气状况表*/
+    private static final String DETAILWEATHER_TABLE = "detail";
+    /*生活指数表*/
+    private static final String INDEX_TABLE = "index";
+
+    public DBController(Context context)
+    {
+        dbHelper = new MySQLiteOpenHelper(context, DBNAME, null, VERSION,)
+    }
+
+}

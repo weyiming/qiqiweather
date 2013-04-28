@@ -1,0 +1,10 @@
+package com.example.weather.data;
+
+/**
+ * Created with IntelliJ IDEA.
+ * Author: weiyiming
+ * Date: 13-4-24
+ * Time: 下午8:28
+ */
+public class WeatherProvider {
+}

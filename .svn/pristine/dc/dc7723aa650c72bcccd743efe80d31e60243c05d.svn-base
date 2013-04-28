@@ -1,0 +1,29 @@
+package com.example.weather.data;
+
+import java.io.File;
+import java.io.IOException;
+import java.util.Properties;
+
+/**
+ * Created with IntelliJ IDEA.
+ * Author: weiyiming
+ * Date: 13-4-24
+ * Time: 下午9:23
+ */
+public class KeyAndValueSwaper {
+    public static void main(String [] args) throws IOException {
+        File cityAndCode = new File("d:/android/apps/weather/res/raw/city_and_code.propertieses");
+        if(!cityAndCode.exists())
+            cityAndCode.createNewFile();
+
+        Properties codeAndCity = new Properties();
+        System.out.println(cityAndCode.getPath());
+        /*codeAndCity.load(new FileReader(new File("d:/android/apps/weather/CodeAndCityty.txt")));
+        Set<String> keySet = codeAndCity.stringPropertyNames();
+
+        FileWriter writer = new FileWriter(city_and_code);
+        for(String code:keySet)
+            writer.append(codeAndCity.getProperty(code) + "=" + code);
+        writer.flush();*/
+    }
+}
