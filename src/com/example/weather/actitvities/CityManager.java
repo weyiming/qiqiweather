@@ -38,13 +38,38 @@ public class CityManager extends Activity {
         testData.add("石家庄");
     }
 
+    @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.citymanager);
+
+        /*获取对citylistview的引用*/
+        cityListView = (ListView)findViewById(R.layout.citylist);
+
+        /*连接到数据库*/
         initData();
         //SimpleAdapter simpleAdapter = new ();
         TextImageAdapter textImageAdapter = new TextImageAdapter(this);
         //setListAdapter(textImageAdapter);
     }
+
+    @Override
+    protected void onResume()
+    {
+        super.onResume();
+    }
+
+    private static final SimpleCursorAdapter.ViewBinder VIEW_BINDER = new SimpleCursorAdapter.ViewBinder()
+    {
+        @Override
+        public boolean setViewValue(View view, Cursor cursor, int columnIndex) {
+            if (view.getId() != R.id.home)
+                return false;
+
+            ((ImageView)view).setBackgroundResource(R.drawable.ic_citymanager_home_activated);
+            return true;
+        }
+    };
 
     public final class ViewHolder{
         public TextView cityName;
